@@ -276,8 +276,8 @@ if __name__ == "__main__":
         profile.set_preference("browser.cache.memory.enable", False)
         profile.set_preference("browser.cache.offline.enable", False)
         profile.set_preference("network.cookie.cookieBehavior", 1)
-        
-        driver = webdriver.Firefox(options=options, firefox_profile=profile)
+
+        driver = webdriver.Firefox(options=options, firefox_profile=profile, executable_path=r'geckodriver.exe')
         
 
         for dataset in config["datasets"]:
